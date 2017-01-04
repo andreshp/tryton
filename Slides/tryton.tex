@@ -168,20 +168,29 @@
 % Define the title page.
 \defbeamertemplate*{title page}{customized}[1][] {
 
-		\vspace{0.48\paperheight}
-		\begin{titleBox}
-			\begin{beamercolorbox}[sep=2pt,center]{title}
-				\usebeamerfont{title}\textbf{\inserttitle}\par
-			\end{beamercolorbox}
-%			\begin{columns}
-%				\column{0.05\textwidth}
-%				\href{https://github.com/andreshp/Big-Data-TPCx-HS}{\includegraphics[width=40pt]{./Images/Logos/github.png}}
-%				\column{0.95\textwidth}
-%				\begin{beamercolorbox}[sep=4pt,center]{author}
-%					\usebeamerfont{author}\authors
-%				\end{beamercolorbox}
-%			\end{columns}
-		\end{titleBox}
+        \begin{figure}
+            \centering
+            \includegraphics[width=5cm]{./Images/Logos/tryton-name.jpg}
+        \end{figure}
+
+        \vspace{0.48\paperheight}
+
+        \begin{flushright}
+            \begin{titleBox}
+    %			\begin{beamercolorbox}[sep=2pt,center]{title}
+    %				\usebeamerfont{title}\textbf{\inserttitle}\par
+    %			\end{beamercolorbox}
+    			\begin{columns}
+    				\column{0.05\textwidth}
+    				\href{https://github.com/andreshp/tryton}{\includegraphics[width=40pt]{./Images/Logos/github.png}}
+    				\column{0.95\textwidth}
+    				\begin{beamercolorbox}[sep=4pt,center]{author}
+    					\usebeamerfont{author} A. Herrera, M. Morales, M. Ruiz
+    				\end{beamercolorbox}
+    			\end{columns}
+    		\end{titleBox}
+        \end{flushright}
+
 
 }
 
@@ -206,7 +215,7 @@
 
 	% Title page.
 	{
-		\usebackgroundtemplate{\includegraphics[width=1\paperwidth]{./Images/Wallpapers/BigDataCropped.jpg}}
+		\usebackgroundtemplate{\includegraphics[height=\paperheight]{./Images/Wallpapers/business-wallpaper.jpg}}
 		\begin{frame}[plain]
 			\titlepage
 		\end{frame}
