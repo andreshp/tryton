@@ -50,14 +50,18 @@ sudo pip install tryton-client
 
 	\begin{frame}[fragile=singleslide]{¿Cómo utilizar tryton?}
         \begin{itemize}
-            \item Configuración y ejecución del servidor - {\color{ChetwodeBlue}\textbf{trytond}}.
+            \fontsize{10}{8}\selectfont
+            \item Configuración y ejecución del servidor - {\color{ChetwodeBlue}\textbf{trytond}}. \\
+                \begin{center}
+                    \texttt{/etc/tryton/trytond.conf}
+                \end{center}
             \item Bases de datos disponibles: \textbf{PostgreSQL}, SQLite, MySQL. (Gracias a \texttt{python-sql}).
             \item Acceso al servidor desde el cliente - $\begin{cases} {\color{ChetwodeBlue}\textbf{tryton-client}} \\ {\color{ChetwodeBlue}\textbf{sao web client}} \end{cases}$.
             \item Demo
         \end{itemize}
         \vspace*{-5mm}
         \begin{center}
-            \includegraphics[width=0.52\textwidth]{./Images/demo.png}
+            \includegraphics[width=0.5\textwidth]{./Images/demo.png}
         \end{center}
 	\end{frame}
 
@@ -79,9 +83,10 @@ sudo pip install tryton-client
                 {\color{ChetwodeBlue}Sao web client}
             \end{center}
             \includegraphics[width=\textwidth]{./Images/tryton-sao.png}
+            \fontsize{10}{8}\selectfont
             \begin{itemize}
                 \item Permite acceder a tryton desde cualquier navegador.
-                \item Intuitivo y bonito.
+                \item Escrito en javascript. Utiliza jQuery y Bootstrap.
             \end{itemize}
         \end{columns}
 

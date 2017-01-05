@@ -167,7 +167,7 @@
 
 \section{Introducción y Nota Histórica}
 
-Tryton es una plataforma informática general de alto nivel basada en el framework Tiny 4.2. Tiny 4.2 era una solución de negocios ERP perteneciente a la entonces empresa TinyERP, que pasó a llamarse OpenERP y actualmente Odoo S.A. Dicha empresa desarrolla un sistema ERP Commercial Open Source Proyect (Proyecto de Código abierto comercial), esto es, el código es libre, pero es la empresa la que selecciona que mejoras se incorporan al proyecto. 
+Tryton es una plataforma informática general de alto nivel basada en el framework Tiny 4.2. Tiny 4.2 era una solución de negocios ERP perteneciente a la entonces empresa TinyERP, que pasó a llamarse OpenERP y actualmente Odoo S.A. Dicha empresa desarrolla un sistema ERP Commercial Open Source Proyect (Proyecto de Código abierto comercial), esto es, el código es libre, pero es la empresa la que selecciona que mejoras se incorporan al proyecto.
 
 Empezaron entonces a desarrollarse numerosas mejoras por parte de las empresasc colaboradoras que OpenERP SA decicdió no integrar, provocando el desarrollo paralelo de Tryton como un fork de Tiny 4.2 suponiendo una alternativa totalmente libre, suponiendo un proyecto totalmente desarrollado por la comunidad. Su primera versión apareció en Noviembre de 2008.\url{http://openerpspain.com/que-es-tryton/}
 
@@ -192,6 +192,28 @@ Dichas categorias a su vez incluyen una amplia gama de módulos (Todos los módu
 %-----------------------------------------------------------------------------------------------------
 
 \section{Descripción de la instalación}
+
+Tryton se encuentra disponible para Windows, Mac OS, Linux Y OpenBSD. Antes de instalar Tryton es necesario tener instalado Python y la librería lxml, \emph{processing xml y html with Python}. Tanto el servidor como el cliente oficial de Tryton han sido desarrollados en Python.
+
+La instalación en Windows se reduce a ejecutar un archivo \texttt{.exe} y seguir las instrucciones. Consecuentemente nos centramos a desarrollar la instalación en Ubuntu, la distribución Linux más popular. En primer lugar hay que instalar lxml y todo su árbol de dependencias. Para ello ejecutamos las siguientes instrucciones en la terminal.
+
+\begin{minted}[bgcolor=bg]{python}
+sudo apt-get build-dep python3-lxml
+sudo apt-get install python3-lxml
+\end{minted}
+
+En la documentación oficial de Tryton recomienda su instalación mediante pip. Pip es un gestor de paquetes de software que han sido desarrollados en Python.  Pip viene por defecto en cualquier distribución de Python. Antes de utilizarlo es conveniente actualizarlo. Posteriormente ya podemos instalar tanto el servidor de Tryton (\texttt{trytond}) como el cliente (\texttt{tryton-client}).
+
+\begin{minted}[bgcolor=bg]{python}
+sudo pip install -U pip # Actualizar pip
+sudo pip install trytond
+sudo pip install tryton-client
+\end{minted}
+
+Para ejecutar el servidor basta con utilizar el comando \texttt{trytond} en alguna terminal. De esta forma el servidor se encuentra escuchando en el puerto que se haya indicado en su archivo de configuración, \texttt{/etc/tryton/trytond.conf}. Previamente hay que configurar la base de datos que utilizará nuestro servidor de Tryton. Podemos utilizar PostgreSQL, SQLite o MySQL como base de datos, aunque en la documentación oficial se recomienda la primera de las tres. Por su parte SQLite suele utilizarse para pruebas o bases de datos simples. Tras crear una base de datos se debe indicar su localización y mecanismo de acceso a Tryton en el archivo de configuración. Cabe destacar que Tryton puede funcionar con estas tres bases de datos gracias a que por debajo utiliza la librería \texttt{python-sql} para realizar las consultas SQL desde Python. Esta librería soporta múltiples bases de datos distintas.
+
+El cliente que hemos instalado se puede iniciar desde la terminal mediante el comando \texttt{tryton-client}. Este
+
 
 %-----------------------------------------------------------------------------------------------------
 %   SECCIÓN 3
@@ -229,7 +251,7 @@ Problemas:
 \section{Empresas que le dan soporte}
 
 Tryton presenta un gran soporte comunitario, pero además es respaldado por varias compañías que proveen servicios profesionales:
-B2CK, incore, Leuchter Open Source Solutions, MBSolutions, NaN-tic, OPDevel, Openlabs Technologies  \& Consulting (P) Limited, SISalp, Soluciones de Inteligencia de Mercados, Thymbra, 
+B2CK, incore, Leuchter Open Source Solutions, MBSolutions, NaN-tic, OPDevel, Openlabs Technologies  \& Consulting (P) Limited, SISalp, Soluciones de Inteligencia de Mercados, Thymbra,
 Virtual Things, Zikzakmedia.(\url{http://www.tryton.org/es/servicios.html})
 
 %-----------------------------------------------------------------------------------------------------
@@ -239,37 +261,5 @@ Virtual Things, Zikzakmedia.(\url{http://www.tryton.org/es/servicios.html})
 \section{Empresas que lo han implantado}
 Como ejemplo de empresas que han implantado Tryton podemos nombrar Zona Franca, ColomTel,10ENLACE, MOTOPROMET,Turesandes,H\&B Negocios y Suministros, MECATRONIC, Ibo Consultorias, etc.
 (\url{http://www.presik.com})
-
-
-%-----------------------------------------------------------------------------------------------------
-%	SECCIÓN 2
-%-----------------------------------------------------------------------------------------------------
-
-\section{Segunda Sección}
-
-	\subsection{Primera subsección}
-
-    \begin{listing}
-        \caption{Estructura que representa una Página en Linux}
-        \begin{minted}[bgcolor=bg]{c}
-            #include <linux/mm_types.h>
-
-            struct page {
-                unsigned long flags;
-                atomic_t _count;
-                atomic_t _mapcount;
-                unsigned long private;
-                struct address_space *mapping;
-                pgoff_t index;
-                struct list_head lru;
-                void *virtual;
-            }
-        \end{minted}
-        \label{listing:page}
-    \end{listing}
-
-	\subsection{Segunda subsección}
-
-		\lipsum[2]
 
 \end{document}
