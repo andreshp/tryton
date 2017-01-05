@@ -6,11 +6,31 @@
 
 \section{Instalación}
 
-	\begin{frame}{Descarga}
 
-	\end{frame}
+	\begin{frame}{Descarga: pip}
+		\begin{mycode}
+#Updrade pip
+pip install -U pip
+
+#Dependencias: python3-lxml y todo su árbol de dependencias
+
+sudo apt-get build-dep python3-lxml
+sudo apt-get build-dep python3-lxml
+
+pip install trytond
+		\end{mycode}
+    \end{frame}
 
 
-	\begin{frame}{Configuración}
-        
+	\begin{frame}[fragile=singleslide]{Configuración de la base de datos}
+
+		\begin{mycode}
+sudo apt install sqlite3
+#creates an sqlite DB in the current folder you are in
+sqlite3 tryton_db.sqlite ""
+
+#initializes the DB
+#you will be prompted for the DB admin password. Choose one.
+trytond-admin -c /home/erp/trytond.conf -d /home/erp/tryton_db --all
+		\end{mycode}
 	\end{frame}

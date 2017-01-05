@@ -49,9 +49,6 @@
 \usepackage{pgfplots}
 \pgfplotsset{width=7cm,compat=1.8}   % Graphics options
 
-% Color box
-\usepackage{tcolorbox}
-
 % Notes
 \usepackage{todonotes}
 
@@ -64,6 +61,29 @@
     visible on/.style={alt={#1{}{invisible}}},
     alt/.code args={<#1>#2#3}{\alt<#1>{\pgfkeysalso{#2}}{\pgfkeysalso{#3}}},
 }
+
+%-----------------------------------------------------------------------------------------------------
+%   CONFIGURACIÓN DE LA INCLUSIÓN DE CÓDIGO
+%-----------------------------------------------------------------------------------------------------
+
+\usepackage{tcolorbox}
+\tcbuselibrary{minted,skins}
+
+\definecolor{bg}{rgb}{0.95,0.95,0.95}        % Se define el color bg usado para bgcolor de Minted.
+
+\newtcblisting{mycode}[1][]{
+	listing engine=minted,
+	colback=bg,
+	colframe=black!70,
+	listing only,
+	minted style=colorful,
+	minted language=#1,
+	minted options={linenos=true,numbersep=3mm,texcl=true},
+	left=5mm,enhanced,
+	overlay={\begin{tcbclipinterior}\fill[black!25] (frame.south west)
+			rectangle ([xshift=5mm]frame.north west);\end{tcbclipinterior}}
+}
+
 
 %-----------------------------------------------------------------------------------------------------
 %	COMMANDS

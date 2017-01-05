@@ -1,0 +1,8 @@
+sudo apt install sqlite3
+#creates an sqlite DB in the current folder you are in
+sqlite3 tryton_db.sqlite ""
+
+#initializes the DB
+#you will be prompted for the DB admin password. Choose one.
+trytond-admin -c /home/erp/trytond.conf -d /home/erp/tryton_db --all
+		
