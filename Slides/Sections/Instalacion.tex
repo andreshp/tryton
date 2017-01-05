@@ -6,15 +6,23 @@
 
 \section{Instalación}
 
+\subsection{Ubuntu}
 
-	\begin{frame}{Descarga: pip}
-		\begin{mycode}
-#Updrade pip
+
+	\begin{frame}[fragile=singleslide]{Descarga: \textbf{pip}}
+
+        \begin{itmeize}
+
+        \end{itmeize}
+
+		\begin{mycode}[bash]
+# Actualizar pip
 pip install -U pip
 
 #Dependencias: python3-lxml y todo su árbol de dependencias
 
 sudo apt-get build-dep python3-lxml
+
 sudo apt-get build-dep python3-lxml
 
 pip install trytond
@@ -24,7 +32,7 @@ pip install trytond
 
 	\begin{frame}[fragile=singleslide]{Configuración de la base de datos}
 
-		\begin{mycode}
+		\begin{mycode}[bash]
 sudo apt install sqlite3
 #creates an sqlite DB in the current folder you are in
 sqlite3 tryton_db.sqlite ""

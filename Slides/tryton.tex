@@ -67,7 +67,7 @@
 %-----------------------------------------------------------------------------------------------------
 
 \usepackage{tcolorbox}
-\tcbuselibrary{minted,skins}
+\tcbuselibrary{minted, skins}
 
 \definecolor{bg}{rgb}{0.95,0.95,0.95}        % Se define el color bg usado para bgcolor de Minted.
 
@@ -78,7 +78,7 @@
 	listing only,
 	minted style=colorful,
 	minted language=#1,
-	minted options={linenos=true,numbersep=3mm,texcl=true},
+	minted options={texcl=true},
 	left=5mm,enhanced,
 	overlay={\begin{tcbclipinterior}\fill[black!25] (frame.south west)
 			rectangle ([xshift=5mm]frame.north west);\end{tcbclipinterior}}
@@ -187,13 +187,13 @@
 
 % Define the title page.
 \defbeamertemplate*{title page}{customized}[1][] {
-
+        %\vspace*{-0.3cm}
         \begin{figure}
             \centering
-            \includegraphics[width=5cm]{./Images/Logos/tryton-name.jpg}
+            \includegraphics[width=5cm]{./Images/Logos/tryton-name.png}
         \end{figure}
 
-        \vspace{0.48\paperheight}
+        \vspace*{0.53\paperheight}
 
         \begin{flushright}
             \begin{titleBox}
