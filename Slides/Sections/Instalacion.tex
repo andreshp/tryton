@@ -14,7 +14,7 @@
 	\begin{frame}[fragile=singleslide]{Descarga: Ubuntu}
 
         \begin{center}
-            {\color{TurkishRose}\textbf{También disponible para Windows!}}            
+            {\color{TurkishRose}\textbf{También disponible para Windows!}}
         \end{center}
 
         \fontsize{10}{8}\selectfont
@@ -52,33 +52,39 @@ sudo pip install tryton-client
         \begin{itemize}
             \item Configuración y ejecución del servidor - {\color{ChetwodeBlue}\textbf{trytond}}.
             \item Bases de datos disponibles: \textbf{PostgreSQL}, SQLite, MySQL. (Gracias a \texttt{python-sql}).
-            \item Acceso al servidor desde el cliente - {\color{ChetwodeBlue}\textbf{tryton-client}}.
+            \item Acceso al servidor desde el cliente - $\begin{cases} {\color{ChetwodeBlue}\textbf{tryton-client}} \\ {\color{ChetwodeBlue}\textbf{sao web client}} \end{cases}$.
             \item Demo
         \end{itemize}
+        \vspace*{-5mm}
         \begin{center}
-            \includegraphics[width=0.55\textwidth]{./Images/demo.png}
+            \includegraphics[width=0.52\textwidth]{./Images/demo.png}
         \end{center}
 	\end{frame}
 
     \begin{frame}[fragile=singleslide]{¿Cómo utilizar tryton?}
-        \vspace*{-0.3cm}
+        \vspace*{-1cm}
+        \begin{flushright}
+            {\color{TurkishRose}\textbf{Interfaz amigable}}
+        \end{flushright}
+        \vspace*{-0.5cm}
         \begin{columns}
-            \column{0.6\textwidth}
+            \column{0.55\textwidth}
             \begin{center}
                 {\color{ChetwodeBlue}Tryton client}
             \end{center}
             \vspace*{-0.1cm}
             \includegraphics[width=\textwidth]{./Images/demo-products.png}
-            \column{0.5\textwidth}
+            \column{0.55\textwidth}
             \begin{center}
-                {\color{ChetwodeBlue}Sao web interface}
+                {\color{ChetwodeBlue}Sao web client}
             \end{center}
             \includegraphics[width=\textwidth]{./Images/tryton-sao.png}
+            \begin{itemize}
+                \item Permite acceder a tryton desde cualquier navegador.
+                \item Intuitivo y bonito.
+            \end{itemize}
         \end{columns}
 
-        \begin{center}
-            {\color{TurkishRose}\textbf{Interfaz amigable}}
-        \end{center}
 	\end{frame}
 
 %	\begin{frame}[fragile=singleslide]{Configuración de la base de datos}
