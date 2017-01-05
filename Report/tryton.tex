@@ -80,6 +80,25 @@
 \rfoot{Página\ \thepage\ de\ \protect\pageref{LastPage}} % Parte derecha.
 
 %-----------------------------------------------------------------------------------------------------
+%   CONFIGURACIÓN DE LOS ENLACES
+%-----------------------------------------------------------------------------------------------------
+
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks   = true,   % Quita las cajas y añade un color al texto.
+    % Tipos de enlaces cuyo color se puede configurar:
+    linkcolor    = cyan,        % Por defecto red
+    anchorcolor  = gray,        % Por defecto black
+    citecolor    = magenta,     % Por defecto green
+    filecolor    = red,         % Por defecto cyan
+    menucolor    = green,       % Por defecto red
+    runcolor     = red,         % Por defecto cyan
+    urlcolor     = cyan,        % Por defecto magenta
+    allcolors    = cyan,        % Si se usa esta opción todos los enlaces de cualquier tipo adquieren el color dado.
+}
+
+%-----------------------------------------------------------------------------------------------------
 %   CONFIGURACIÓN DE LA INCLUSIÓN DE CÓDIGO
 %-----------------------------------------------------------------------------------------------------
 
@@ -146,18 +165,81 @@
 %	SECCIÓN 1
 %-----------------------------------------------------------------------------------------------------
 
-\section{Primera Sección}
+\section{Introducción y Nota Histórica}
 
-	Bienvenido a mi plantilla de \LaTeX. Esta es la versión básica que dispone de la siguiente capacidad de configuración:
+Tryton es una plataforma informática general de alto nivel basada en el framework Tiny 4.2. Tiny 4.2 era una solución de negocios ERP perteneciente a la entonces empresa TinyERP, que pasó a llamarse OpenERP y actualmente Odoo S.A. Dicha empresa desarrolla un sistema ERP Commercial Open Source Proyect (Proyecto de Código abierto comercial), esto es, el código es libre, pero es la empresa la que selecciona que mejoras se incorporan al proyecto. 
 
-	\begin{itemize}
-		\item En la sección TÍTULO, AUTOR Y OTROS DATOS DEL DOCUMENTO puedes introducir estos datos de manera sencilla para que se utilicen en a lo largo del documento.
-		\item En la sección ÍNDICE puedes seleccionar su profundidad.
-		\item Puedes elegir diversos formatos para la portada. Estos se encuentran implementados en los archivos \texttt{title*.sty} que se encuentran junto a esta plantilla en el repositorio. No olvides situar el archivo que desees utilizar junto con el \texttt{.tex} del documento. Por último, selecciónalo mediante \texttt{usepackage} dentro de la sección PORTADA.
-		\item En la sección RESUMEN puedes escribir un resumen del documento. En tal caso, este aparecerá en la portada. Si dejas vacío el resumen, entonces la portada cambiará levemente y no lo incluirá.
-	\end{itemize}
+Empezaron entonces a desarrollarse numerosas mejoras por parte de las empresasc colaboradoras que OpenERP SA decicdió no integrar, provocando el desarrollo paralelo de Tryton como un fork de Tiny 4.2 suponiendo una alternativa totalmente libre, suponiendo un proyecto totalmente desarrollado por la comunidad. Su primera versión apareció en Noviembre de 2008.\url{http://openerpspain.com/que-es-tryton/}
 
-	He intentado mantener esta plantilla lo más sencilla posible para facilitar su uso. Si necesitas mayor funcionalidad puedes encontrarla en el repositorio de GitHub (https://github.com/andreshp/LatexTemplates).
+Por tanto Tryton supone un framework con características similares a las que ofrecía Tiny, esto es, está desarrollado en Python y usa como base de datos principalmente PostgreSQL. Además, dicha plataforma de alto nivel está diseñada en tres capas (cliente Tryton, servidor Tryton y Base de Datos), ofreciendo una amplia funcionalidad mediante módulos. Los módulos presentes actualmente engloban las siguientes categorías:\url{https://www.tryton.org/es/}
+
+\begin{itemize}
+    \item Contabilidad
+    \item Facturación
+    \item Gestión de ventas
+    \item Gestión de compras
+    \item Contabilidad analítica
+    \item Gestión de inventario
+    \item Fabricación: Manufacturing Resource Planning (MRP)
+    \item Gestión de proyectos
+    \item Gestión de iniciativas y oportunidades
+\end{itemize}
+
+Dichas categorias a su vez incluyen una amplia gama de módulos (Todos los módulos pueden consultarse en \url{https://pypi.python.org/pypi?:action=browse&show=all&c=551})
+
+%-----------------------------------------------------------------------------------------------------
+%   SECCIÓN 2
+%-----------------------------------------------------------------------------------------------------
+
+\section{Descripción de la instalación}
+
+%-----------------------------------------------------------------------------------------------------
+%   SECCIÓN 3
+%-----------------------------------------------------------------------------------------------------
+
+\section{Funcionalidad que ofrece}
+
+Las funcionalidades que aporta son las siguientes:
+
+persistencia de datos, extensa modularidad, administración de usuarios (autentificación, control detallado de acceso a los datos, manejo concurrente a recursos), flujos de trabajo y motores de reportes, servicios web e internacionalización.
+
+\url{https://www.tryton.org/es/}
+
+%-----------------------------------------------------------------------------------------------------
+%   SECCIÓN 4
+%-----------------------------------------------------------------------------------------------------
+
+\section{Ventajas e inconvenientes encontrados durante la prueba}
+Ventajas:
+\begin{itemize}
+    \item Su estructura es mucho más parecida a la de Django, presentando una mayor escalabilidad que su alternativa en OpenERP. Esto facilita el desarrollo de módulos específicos a cada cliente
+    \item Facilidad de migración entre versiones.
+\end{itemize}
+
+Problemas:
+\begin{itemize}
+    \item Numerosos módulos que dificultan su uso--> cada cliente puede instalar tan solo los módulos que necesita
+    \item La total libertad para desarrollar dificulta un desarrollo coherente y ordenado del proyecto--> a partir de 2012 las empresas Zikzakmedia y NaN-Tic pasan a estar detrás de Tryton en la entonces creada fundación Tryton, coordinando el desarrollo del proyecto, pero sin tomar decisiones sobre la funcionalidad a añadir.(\url{http://www.zikzakmedia.com/es/tryton.html})
+\end{itemize}
+
+%-----------------------------------------------------------------------------------------------------
+%   SECCIÓN 5
+%-----------------------------------------------------------------------------------------------------
+
+\section{Empresas que le dan soporte}
+
+Tryton presenta un gran soporte comunitario, pero además es respaldado por varias compañías que proveen servicios profesionales:
+B2CK, incore, Leuchter Open Source Solutions, MBSolutions, NaN-tic, OPDevel, Openlabs Technologies  \& Consulting (P) Limited, SISalp, Soluciones de Inteligencia de Mercados, Thymbra, 
+Virtual Things, Zikzakmedia.(\url{http://www.tryton.org/es/servicios.html})
+
+%-----------------------------------------------------------------------------------------------------
+%   SECCIÓN 6
+%-----------------------------------------------------------------------------------------------------
+
+\section{Empresas que lo han implantado}
+Como ejemplo de empresas que han implantado Tryton podemos nombrar Zona Franca, ColomTel,10ENLACE, MOTOPROMET,Turesandes,H\&B Negocios y Suministros, MECATRONIC, Ibo Consultorias, etc.
+(\url{http://www.presik.com})
+
 
 %-----------------------------------------------------------------------------------------------------
 %	SECCIÓN 2
