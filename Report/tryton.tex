@@ -165,13 +165,26 @@
 %	SECCIÓN 1
 %-----------------------------------------------------------------------------------------------------
 
-\section{Introducción y Nota Histórica}
+\section{Introducción}
 
-Tryton es una plataforma informática general de alto nivel basada en el framework Tiny 4.2. Tiny 4.2 era una solución de negocios ERP perteneciente a la entonces empresa TinyERP, que pasó a llamarse OpenERP y actualmente Odoo S.A. Dicha empresa desarrolla un sistema ERP Commercial Open Source Proyect (Proyecto de Código abierto comercial), esto es, el código es libre, pero es la empresa la que selecciona que mejoras se incorporan al proyecto.
+Tryton es un sistema de planificación de recursos empresariales escrito en Python. Su principal particularidad es que es open-source. En concreto, utiliza la licencia GPLv3, cuyas características son las siguientes:
 
-Empezaron entonces a desarrollarse numerosas mejoras por parte de las empresasc colaboradoras que OpenERP SA decicdió no integrar, provocando el desarrollo paralelo de Tryton como un fork de Tiny 4.2 suponiendo una alternativa totalmente libre, suponiendo un proyecto totalmente desarrollado por la comunidad. Su primera versión apareció en Noviembre de 2008.\url{http://openerpspain.com/que-es-tryton/}
+\begin{itemize}
+    \item Libertad para utilzar el software;
+    \item Libertad para modificar el software;
+    \item Libertal para compartir el software;
+    \item Las modificaciones del software deben llevar licencia GPL.
+\end{itemize}
 
-Por tanto Tryton supone un framework con características similares a las que ofrecía Tiny, esto es, está desarrollado en Python y usa como base de datos principalmente PostgreSQL. Además, dicha plataforma de alto nivel está diseñada en tres capas (cliente Tryton, servidor Tryton y Base de Datos), ofreciendo una amplia funcionalidad mediante módulos. Los módulos presentes actualmente engloban las siguientes categorías:\url{https://www.tryton.org/es/}
+Python es un lenguaje interpretado cuya máxima es que el código sea simple, conciso, legible, explícito y bonito. Estas máximas se transladan a Tryton. Otra característica importante de Tryton en la cual se hará un gran inciso a lo largo del trabajo es su modularidad. Dispone de multitud de módulos que se instalan por separado y permiten ampliar su funcionalidad. Gran parte de estos módulos se han desarrollado por la comunidad gracias a que Tryton es open-source. Además, la popularidad y eficiencia a la hora de programar de Python ha ayudado en este aspecto.
+
+\section{Nota Histórica}
+
+Tryton está basado en el framework Tiny 4.2, que era una solución de negocios ERP perteneciente a la empresa TinyERP. Esta empresa y su software pasó a llamarse OpenERP. Actualmente ambos se conocen como Odoo Dicha empresa desarrolla un sistema ERP Commercial Open Source Proyect (Proyecto de Código abierto comercial), esto es, el código es libre, pero es la empresa la que selecciona que mejoras se incorporan al proyecto.
+
+Al crecer TinyERP en popularidad empezaron a desarrollarse numerosas mejoras por parte de las empresas colaboradoras. TinyERP SA decidió no integrar parte de estas mejoras, provocando el desarrollo paralelo de Tryton como un fork open-source de Tiny 4.2. Este nuevo proyecto pasó a estar totalmente desarrollado por la comunidad. Su primera versión apareció en Noviembre de 2008 \cite{que-es-tryton}.
+
+Tryton es un framework ERP con características similares a las que ofrecía Tiny, esto es, está desarrollado en Python y usa como base de datos principalmente PostgreSQL. Además, dicha plataforma de alto nivel está diseñada en tres capas (cliente Tryton, servidor Tryton y Base de Datos), ofreciendo una amplia funcionalidad mediante módulos. Los módulos presentes actualmente engloban las siguientes categorías \cite{tryton}:
 
 \begin{itemize}
     \item Contabilidad
@@ -185,7 +198,7 @@ Por tanto Tryton supone un framework con características similares a las que of
     \item Gestión de iniciativas y oportunidades
 \end{itemize}
 
-Dichas categorias a su vez incluyen una amplia gama de módulos (Todos los módulos pueden consultarse en \url{https://pypi.python.org/pypi?:action=browse&show=all&c=551})
+Dichas categorias a su vez incluyen una amplia gama de módulos (Todos los módulos pueden consultarse en \cite{modulos}).
 
 %-----------------------------------------------------------------------------------------------------
 %   SECCIÓN 2
@@ -265,9 +278,14 @@ Como ejemplo de empresas que han implantado Tryton podemos nombrar Zona Franca, 
 (\url{http://www.presik.com})
 
 \begin{thebibliography}{99}
+\bibitem{que-es-tryton} Qué es tryton, Open ERP Spain \url{http://openerpspain.com/que-es-tryton/}.
+\bibitem{tryton} Página web oficial de Tryton, \url{https://www.tryton.org/es/}.
+\bibitem{modulos} Módulos de Tryton, \url{https://pypi.python.org/pypi?:action=browse&show=all&c=551}.
+\bibitem{openerp2tryton} A Quick Guide to GPLv3, GNU Operating System \url{https://www.gnu.org/licenses/quick-guide-gplv3.html}.
 \bibitem{lxml} lxml, \url{http://lxml.de/}.
 \bibitem{descarga} Descarga de Tryton, \url{http://www.tryton.org/es/descarga.html}.
 \bibitem{sao} Tryton ERP installation with sao on Ubuntu, VapoRizer, \url{http://stackoverflow.com/questions/41144739/tryton-erp-installation-with-sao-on-ubuntu}.
 \bibitem{openerp2tryton} OpenERP to Tryton, \url{www.openerp2tryton.com}.
+
 \end{thebibliography}
 \end{document}
