@@ -12,22 +12,37 @@
 	% Set the headline
 	\setbeamertemplate{headline}{
 		\begin{beamercolorbox}[sep=4pt]{title}
-			\usebeamerfont{frametitle}{\color{ChetwodeBlue}Motivación: ERP con Python}
+			\usebeamerfont{frametitle}{\color{ChetwodeBlue}Motivación: ERP libre con Python}
 		\end{beamercolorbox}
 	}
 
 	\begin{frame}{}
+        \fontsize{11}{11}\selectfont
         \begin{columns}
-            \column{0.6\textwidth}
-            \includegraphics[width=\textwidth]{./Images/erp-explicacion.jpg}
             \column{0.55\textwidth}
-            \includegraphics[width=0.7\textwidth]{./Images/python.jpg}
+            \vspace*{-5mm}
+            \begin{center}
+                \includegraphics[width=0.7\textwidth]{./Images/python.jpg}
+            \end{center}
             \begin{itemize}
                 \item Beautiful is better than ugly.
                 \item Explicit is better than implicit.
                 \item Simple is better than complex
             \end{itemize}
+            \column{0.6\textwidth}
+            \vspace*{-1.3cm}
+            \begin{center}
+            \includegraphics[width=0.5\textwidth]{./Images/gpl3.jpg}
+            \end{center}
+
+            \includegraphics[width=\textwidth]{./Images/erp-explicacion.jpg}
         \end{columns}
+        \vspace*{2mm}
+        \begin{tcolorbox}[colback=ChetwodeBlue!10,colframe=ChetwodeBlue!60]
+            \centering
+            {\color{TurkishRose}\textbf{Objetivo: Open-source, modular y facilidad de desarrollo.}} \\
+            Facilita las contribuciones de la comunidad.
+        \end{tcolorbox}
 
 	\end{frame}
 }
