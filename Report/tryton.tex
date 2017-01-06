@@ -193,7 +193,7 @@ Dichas categorias a su vez incluyen una amplia gama de módulos (Todos los módu
 
 \section{Descripción de la instalación}
 
-Tryton se encuentra disponible para Windows, Mac OS, Linux Y OpenBSD. Antes de instalar Tryton es necesario tener instalado Python y la librería lxml, \emph{processing xml y html with Python}. Tanto el servidor como el cliente oficial de Tryton han sido desarrollados en Python.
+Tryton se encuentra disponible para Windows, Mac OS, Linux Y OpenBSD \cite{descarga}. Antes de instalar Tryton es necesario tener instalado Python y la librería lxml, \emph{processing xml y html with Python} \cite{lxml} Esta librería permite tratar archivos \texttt{xml} y \texttt{html} con facilidad desde Python. Su utilidad reside en que tanto el servidor como el cliente oficial de Tryton han sido desarrollados en Python.
 
 La instalación en Windows se reduce a ejecutar un archivo \texttt{.exe} y seguir las instrucciones. Consecuentemente nos centramos a desarrollar la instalación en Ubuntu, la distribución Linux más popular. En primer lugar hay que instalar lxml y todo su árbol de dependencias. Para ello ejecutamos las siguientes instrucciones en la terminal.
 
@@ -212,7 +212,9 @@ sudo pip install tryton-client
 
 Para ejecutar el servidor basta con utilizar el comando \texttt{trytond} en alguna terminal. De esta forma el servidor se encuentra escuchando en el puerto que se haya indicado en su archivo de configuración, \texttt{/etc/tryton/trytond.conf}. Previamente hay que configurar la base de datos que utilizará nuestro servidor de Tryton. Podemos utilizar PostgreSQL, SQLite o MySQL como base de datos, aunque en la documentación oficial se recomienda la primera de las tres. Por su parte SQLite suele utilizarse para pruebas o bases de datos simples. Tras crear una base de datos se debe indicar su localización y mecanismo de acceso a Tryton en el archivo de configuración. Cabe destacar que Tryton puede funcionar con estas tres bases de datos gracias a que por debajo utiliza la librería \texttt{python-sql} para realizar las consultas SQL desde Python. Esta librería soporta múltiples bases de datos distintas.
 
-El cliente que hemos instalado se puede iniciar desde la terminal mediante el comando \texttt{tryton-client}. Este
+El cliente que hemos instalado se puede iniciar desde la terminal mediante el comando \texttt{tryton-client}. La interfaz gráfica del cliente se ha implementado con Gtk+. Su uso es intuitivo y amigable.
+
+Cabe destacar que existe un cliente de Tryton para navegadores web. El cliente en cuestión se llama sao y ha sido desarrollado en javascript. Además, utiliza la librería jQuery para realizar consultas y la librería Bootstrap para implementar la interfaz gráfica. La interfaz es moderna y minimalista dentro de lo que cabe. Para su instalación junto con Tryton referimos a \cite{sao}.
 
 
 %-----------------------------------------------------------------------------------------------------
@@ -261,5 +263,11 @@ Virtual Things, Zikzakmedia.(\url{http://www.tryton.org/es/servicios.html})
 \section{Empresas que lo han implantado}
 Como ejemplo de empresas que han implantado Tryton podemos nombrar Zona Franca, ColomTel,10ENLACE, MOTOPROMET,Turesandes,H\&B Negocios y Suministros, MECATRONIC, Ibo Consultorias, etc.
 (\url{http://www.presik.com})
+
+\begin{thebibliography}{99}
+\bibitem{lxml} lxml, \url{http://lxml.de/}.
+\bibitem{descarga} Descarga de Tryton, \url{http://www.tryton.org/es/descarga.html}.
+\bibitem{sao} Tryton ERP installation with sao on Ubuntu, VapoRizer, \url{http://stackoverflow.com/questions/41144739/tryton-erp-installation-with-sao-on-ubuntu}.
+\end{thebibliography}
 
 \end{document}
