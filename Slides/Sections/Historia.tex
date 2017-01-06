@@ -4,27 +4,34 @@
 % 							 DDSI 2017
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%!TEX root = yourmasterfile.tex
+%!TEX root = ../tryton.tex
 
 \section{Historia}
 
 	\begin{frame}{Nota Histórica}
-	\fontsize{11}{11}\selectfont
+	\fontsize{10}{11}\selectfont
         \begin{columns}
-            \column{0.55\textwidth}
-            \vspace*{-5mm}
-			\begin{itemize}
-				\item Fork de Tiny 4.2, surgida a comienzos del siglo XXI
-				\item Autores iniciales: Menten, Delescolle y Évard
-				\item Primera versión en 2008	
-				\item Nace Fondation Privée Tryton en 2012
-				\item Conferencias en Liège, Barcelona, Leipzig y Buenos Aires.
-			\end{itemize}
             \column{0.6\textwidth}
-            \vspace*{-0.5cm}
+            \begin{tikzpicture}[node distance=0pt,
+                SA/.style = {single arrow, draw=blue!40!gray, very thick, fill=blue!20!gray!10, minimum height=1.2*\n1} ]
+                \node (n)   [text width=\textwidth] {
+                \begin{itemize}
+                    \item Fork de Tiny 4.2, surgida a comienzos del siglo XXI
+                    \item Autores iniciales: Menten, Delescolle y Évard
+                    \item Primera versión en 2008
+                    \item Nace Fondation Privée Tryton en 2012
+                    \item Conferencias en Liège, Barcelona, Leipzig y Buenos Aires.
+                \end{itemize}
+                };
+                \path let \p1 = ($(n.north)-(n.south)$/2), \n1 = {veclen(\y1,\x1)} in
+                node[SA, rotate=-90,  xshift=-\n1/2, above = of n.south west] {};
+            \end{tikzpicture}
+            \column{0.5\textwidth}
+            \vspace*{-1cm}
             \begin{center}
-            \includegraphics[width=0.4\textwidth]{./Images/tinyERP.jpg}
+            \includegraphics[width=0.8\textwidth]{./Images/tinyERP.jpg}
             \end{center}
+            \vspace*{-0.5cm}
             \begin{center}
             \includegraphics[width=0.4\textwidth]{./Images/Logos/tryton-logo-2.png}
             \end{center}
