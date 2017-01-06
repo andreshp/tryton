@@ -1,5 +1,4 @@
-# Actualizar pip
-sudo pip install -U pip
-sudo pip install trytond
-sudo pip install tryton-client
-        
+user = Table('user')
+select = user.select()
+select.where = user.name == 'foo'
+            

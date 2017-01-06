@@ -4,10 +4,61 @@
 % 							 DDSI 2017
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%!TEX root = ../tryton.tex
+%!TEX language = es
+
 \section{Ventajas e inconvenientes}
 
-	\begin{frame}{Ventajas}
-    \end{frame}
+	\begin{frame}[fragile=singleslide]{Ventajas}
 
-	\begin{frame}{Inconvenientes}
+        \begin{columns}
+            \column{0.55\textwidth}
+            \begin{tikzpicture}
+                \node [fill=Grandis!80, circle,inner sep=5pt, text width=2cm, align=center] (ise) {Open-source};
+                \node [fill=TurkishRose!80, circle,inner sep=6pt, text width=2cm, align=center, right= 2cm of $(ise)$] (pd) {Modularidad};
+                \node [fill=ChetwodeBlue!80, circle, inner sep=5pt, text width=2cm, align=center, above = 16mm of $(ise)!0.5!(pd)$] (cd) {Python};
+                \node [fill=Jaguar!85, circle, inner sep=1pt, text width=2cm, align=center, below = 5mm of $(cd)$] (bd) {\color{white}{{Desarrollo por la comunidad}}};
+            \end{tikzpicture}
+
+            \column{0.55\textwidth}
+            \begin{itemize}
+                \item Escalabilidad;
+                \item Facilidad de migración entre versiones;
+                \item Creación de nuevas liberías: python-sql, GooCalendar...
+            \end{itemize}
+            \begin{center}
+                \includegraphics[width=0.3\textwidth]{./Images/sql_python.png}
+            \end{center}
+            \fontsize{8}{8}\selectfont
+            \begin{mycode}[python]
+user = Table('user')
+select = user.select()
+select.where = user.name == 'foo'
+            \end{mycode}
+        \end{columns}
 	\end{frame}
+
+    \begin{frame}{Inconvenientes}
+        \vspace*{-3mm}
+        \fontsize{9}{8}\selectfont
+        \begin{columns}
+            \column{0.55\textwidth}
+        \begin{itemize}
+            \item Excesivo número de módulos.
+            \item Desarrollo desorganizado.
+            \item Revisión insuficiente del código.
+            \item El soporte no es tan amplio como en otros ERP.
+        \end{itemize}
+        \column{0.45\textwidth}
+        \includegraphics[width=\textwidth]{./Images/erp.jpeg}
+    \end{columns}
+    \begin{tcolorbox}[colback=ChetwodeBlue!10,colframe=ChetwodeBlue!60]
+        \centering
+        \fontsize{8}{8}\selectfont
+        \textbf{ Los inconvenientes son relativos, B2CK da soporte.}
+    \end{tcolorbox}
+    \begin{center}
+        \includegraphics[width=0.65\textwidth]{./Images/b2ck.png}
+    \end{center}
+
+    \end{frame}
