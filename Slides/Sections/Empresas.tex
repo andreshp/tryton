@@ -4,7 +4,12 @@
 % 							 DDSI 2017
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%!TEX root = ../tryton.tex
+%!TEX language = es
+
 \section{Empresas}
+
+    \subsection{Soporte}
 
 	\begin{frame}{Empresas que dan soporte a Tryton}
 	\fontsize{10}{11}\selectfont
@@ -32,10 +37,9 @@
             \includegraphics[width=0.8\textwidth]{./Images/NaNtic.JPG}
             \end{center}
         \end{columns}
-
-
     \end{frame}
 
+    \subsection{Empresas que utilizan Tryton}
 
 	\begin{frame}{Empresas que utilizan Tryton}
 	\fontsize{10}{11}\selectfont
@@ -64,9 +68,48 @@
             \begin{center}
             \includegraphics[width=0.8\textwidth]{./Images/IboConsultorias.png}
             \end{center}
-
-        \end{columns}    
+        \end{columns}
 	\end{frame}
+
+\section{Conclusión}
+
+    \begin{frame}
+        \centering
+        \begin{tikzpicture}
+            \node [fill=Grandis!80, circle,inner sep=5pt, text width=2cm, align=center] (ise) {Open-source};
+            \node [fill=TurkishRose!80, circle,inner sep=6pt, text width=2cm, align=center, right= 2cm of $(ise)$] (pd) {Modularidad};
+            \node [fill=ChetwodeBlue!80, circle, inner sep=5pt, text width=2cm, align=center, above = 16mm of $(ise)!0.5!(pd)$] (cd) {Python};
+            \node [fill=Jaguar!85, circle, inner sep=1pt, text width=2cm, align=center, below = 5mm of $(cd)$] (bd) {\color{white}{{Desarrollo por la comunidad}}};
+        \end{tikzpicture}
+
+        \begin{tcolorbox}[colback=ChetwodeBlue!10,colframe=ChetwodeBlue!60]
+            \centering
+            {\color{TurkishRose}\textbf{¡Usad Tryton!}}
+        \end{tcolorbox}
+
+    \end{frame}
+
+
+
+\section{Referencias}
+
+    \begin{frame}
+        \fontsize{6}{1}\selectfont
+        \begin{thebibliography}{99}
+            \bibitem{que-es-tryton} Qué es Tryton, Open ERP Spain\\ \url{http://openerpspain.com/que-es-tryton/}
+            \bibitem{tryton} Página web oficial de Tryton \\ \url{https://www.tryton.org/es/}
+            \bibitem{zikzak} Zikzakmedia - Tryton \\ \url{http://www.zikzakmedia.com/es/tryton.html}
+            \bibitem{modulos} Módulos de Tryton \\ \url{https://pypi.python.org/pypi?:action=browse&show=all&c=551}
+            \bibitem{gpl} A Quick Guide to GPLv3, GNU Operating System \\ \url{https://www.gnu.org/licenses/quick-guide-gplv3.html}
+            \bibitem{lxml} lxml \url{http://lxml.de/}
+            \bibitem{descarga} Descarga de Tryton \\ \url{http://www.tryton.org/es/descarga.html}
+            \bibitem{sao} Tryton ERP installation with sao on Ubuntu, VapoRizer \\ \url{http://stackoverflow.com/questions/41144739/tryton-erp-installation-with-sao-on-ubuntu}
+            \bibitem{openerp2tryton} OpenERP to Tryton\\ \url{www.openerp2tryton.com}
+            \bibitem{openexpo} OpenExpo \\ \url{http://www.openexpo.es/tryton-la-experiencia-aplicada-al-erp/}
+            \bibitem{wikipedia} Comparativa Tryton OpenERP \\ \url{https://es.wikipedia.org/wiki/Anexo:ComparaciC3B3n\_entre\_Tryton\_y\_OpenERP\#cite\_note-2}
+        \end{thebibliography}
+    \end{frame}
+
 
 	\setbeamertemplate{headline}{
 		\begin{beamercolorbox}[wd=\paperwidth,ht=5pt]{last head}
